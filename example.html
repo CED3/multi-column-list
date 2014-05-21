@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Multi Column Demo</title>
+  <style type="text/css">   
+ 
+ul.multiColumnListColumn {
+    display: inline-block;
+    *float: left;
+    vertical-align:top;
+     background-color: black;
+  color: #CCC;
+  border-right: 1px solid red;
+}
+  </style>
+</head>
+<body>
+<h2>20 Item List: </h2>
+<div class="multiColumnedList">
+<ul>
+  <li>Item 1 </li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
+    <li>Item 17</li>
+    <li>Item 18</li>
+    <li>Item 19</li>    
+    <li>Item 20</li>
+</ul>
+  </div>
+<h2>19 Item List: </h2>
+  <div class="multiColumnedList">
+<ul>
+  <li>Item 1 </li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
+    <li>Item 17</li>
+    <li>Item 18</li>
+    <li>Item 19</li>
+</ul>
+  </div>
+  <h2>22 Item List: </h2>
+    <div class="multiColumnedList">
+<ul>
+  <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+    <li>Item 11</li>
+    <li>Item 12</li>
+    <li>Item 13</li>
+    <li>Item 14</li>
+    <li>Item 15</li>
+    <li>Item 16</li>
+    <li>Item 17</li>
+    <li>Item 18</li>
+    <li>Item 19</li>
+    <li>Item 20</li>
+    <li>Item 21</li>
+    <li>Item 22</li>
+</ul>
+  </div>
+<script type="text/javascript" src="../js/faoweb_libs.js"></script>
+<script type="text/javascript" src="multiColumnLists.js"></script>
+<script type="text/javascript">
+
+$(".multiColumnedList").multiColumnLists({
+    columnWidth: 250,
+    containerEl: $("body")
+});
+</script>
+</body>
+</html>
