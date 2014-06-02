@@ -28,19 +28,25 @@
                 listEl.find("> li").each(function () {
                     listItems.push("<li>" + $(this).html() + "</li>");
                 });
-                var widthDiff = listEl.outerWidth() - listEl.width();
+                var widthDiff = listEl.outerWidth() - listEl.width();               
                 
-                var redrawList = function () {      
+                var redrawList = function () {
+                    var windowWidth = $(window).width();
+                    var columnWidth = (options.columnWidth - widthDiff);
+                    if (columnWidth > windowWidth) {
+                        columnWidth = "auto";
+                    } else {
+                        columnWidth += "px";
+                    }
                     var columns = Math.max(1, Math.floor(options.containerEl.width() / (options.columnWidth )));                    
                     var itemsPerColumn = Math.floor(listItems.length / columns);
                     var extraItems = listItems.length % columns;
                     var output = "";
                     var currentItem = 0;
                     for (var i = 0; i < columns; i++) {
-                        output += "<ul class='multiColumnListColumn' style='width:" + (options.columnWidth - widthDiff) + "px'>";
+                        output += "<ul class='multiColumnListColumn' style='width:" + columnWidth + "'>";
                         var startIndex = currentItem;
-                        var columnLength = itemsPerColumn + (i <extraItems?1:0);
-                        console.log(columnLength, extraItems);
+                        var columnLength = itemsPerColumn + (i <extraItems?1:0);                        
                         for (var j = 0; j < columnLength; j++) {
                             output +=  listItems[j + startIndex];
                             
